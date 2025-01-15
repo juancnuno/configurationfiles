@@ -2,5 +2,6 @@
     "editor.cursorBlinking": "solid",
     "files.trimTrailingWhitespace": true,
     "testing.automaticallyOpenPeekView": "never",
+    "window.titleBarStyle": "custom",
     "workbench.editor.enablePreview": false
 }

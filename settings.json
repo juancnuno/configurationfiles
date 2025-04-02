@@ -1,5 +1,8 @@
 {
     "editor.cursorBlinking": "solid",
+    "editor.rulers": [
+        100
+    ],
     "files.trimTrailingWhitespace": true,
     "testing.automaticallyOpenPeekView": "never",
     "window.titleBarStyle": "custom",

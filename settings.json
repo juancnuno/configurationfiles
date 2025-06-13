@@ -5,6 +5,6 @@
     ],
     "files.trimTrailingWhitespace": true,
     "testing.automaticallyOpenPeekView": "never",
-    "window.titleBarStyle": "custom",
+    "window.titleBarStyle": "native",
     "workbench.editor.enablePreview": false
 }

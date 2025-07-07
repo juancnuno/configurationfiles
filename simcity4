@@ -1,0 +1,2 @@
+#!/bin/bash
+wine "$HOME/.wine/dosdevices/c:/GOG Games/SimCity 4 Deluxe Edition/Apps/SimCity 4.exe"

@@ -68,8 +68,10 @@
   #  /etc/profiles/per-user/juancnuno/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    VISUAL = "vim";
   };
+
+  programs.bash.enable = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

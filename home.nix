@@ -73,6 +73,10 @@
 
   programs.bash.enable = true;
 
+  programs.bash.shellAliases = {
+    ls = "ls --color=auto -l";
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

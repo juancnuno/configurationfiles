@@ -107,7 +107,6 @@
     gh
     git
     google-chrome
-    home-manager
     vim
     vscode
   ];

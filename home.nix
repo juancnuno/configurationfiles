@@ -3,6 +3,7 @@
 {
   imports = [
     ./bash.nix
+    ./git.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -77,43 +78,6 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  programs.git.enable = true;
-
-  programs.git.settings = {
-    credential = {
-      "https://gist.github.com/" = {
-        helper = [
-          ""
-          "!/run/current-system/sw/bin/gh auth git-credential"
-        ];
-      };
-
-      "https://github.com/" = {
-        helper = [
-          ""
-          "!/run/current-system/sw/bin/gh auth git-credential"
-        ];
-      };
-    };
-
-    diff = {
-      tool = "meld";
-    };
-
-    difftool = {
-      prompt = false;
-    };
-
-    init = {
-      defaultBranch = "main";
-    };
-
-    user = {
-      email = "juancnuno@gmail.com";
-      name = "Juan C Nuno";
-    };
-  };
 
   programs.vscode.enable = true;
 

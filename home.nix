@@ -4,6 +4,7 @@
   imports = [
     ./bash.nix
     ./git.nix
+    ./vscode.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -78,19 +79,4 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  programs.vscode.enable = true;
-
-  programs.vscode.profiles.default.userSettings = {
-    "editor.cursorBlinking" = "solid";
-
-    "editor.rulers" = [
-      100
-    ];
-
-    "files.trimTrailingWhitespace" = true;
-    "window.menuStyle" = "custom";
-    "window.titleBarStyle" = "native";
-    "workbench.editor.enablePreview" = false;
-  };
 }

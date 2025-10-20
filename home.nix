@@ -85,14 +85,14 @@
 
   programs.git.settings = {
     credential = {
-      "https://gist.github.com" = {
+      "https://gist.github.com/" = {
         helper = [
           ""
           "!/run/current-system/sw/bin/gh auth git-credential"
         ];
       };
 
-      "https://github.com" = {
+      "https://github.com/" = {
         helper = [
           ""
           "!/run/current-system/sw/bin/gh auth git-credential"

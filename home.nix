@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./bash.nix
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "juancnuno";
@@ -69,13 +73,6 @@
   #
   home.sessionVariables = {
     VISUAL = "vim";
-  };
-
-  programs.bash.enable = true;
-  programs.bash.initExtra = "HISTTIMEFORMAT='%c '";
-
-  programs.bash.shellAliases = {
-    ls = "ls --color=auto -l";
   };
 
   # Let Home Manager install and manage itself.

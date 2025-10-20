@@ -1,8 +1,7 @@
 {
-  programs.bash.enable = true;
-  programs.bash.initExtra = "HISTTIMEFORMAT='%c '";
-
-  programs.bash.shellAliases = {
-    ls = "ls --color=auto -l";
+  programs.bash = {
+    enable = true;
+    initExtra = "HISTTIMEFORMAT='%c '";
+    shellAliases.ls = "ls --color=auto -l";
   };
 }

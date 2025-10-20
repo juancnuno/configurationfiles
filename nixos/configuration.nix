@@ -10,7 +10,7 @@
       <nixos-hardware/framework/13-inch/12th-gen-intel>
 
       # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
+      ./hardware-configuration.nix
     ];
 
   # Bootloader.

@@ -108,6 +108,7 @@
     git
     gnupg
     google-chrome
+    meld
     pinentry-gnome3
     vim
     vscode

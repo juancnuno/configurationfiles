@@ -4,6 +4,7 @@
   imports = [
     ./bash.nix
     ./git.nix
+    ./gpg-agent.nix
     ./vscode.nix
   ];
 

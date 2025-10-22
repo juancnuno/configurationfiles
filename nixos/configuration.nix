@@ -106,7 +106,9 @@
   environment.systemPackages = with pkgs; [
     gh
     git
+    gnupg
     google-chrome
+    pinentry-gnome3
     vim
     vscode
   ];

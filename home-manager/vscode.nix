@@ -3,6 +3,7 @@
     enable = true;
 
     profiles.default.userSettings = {
+      "chat.disableAIFeatures" = true;
       "editor.cursorBlinking" = "solid";
 
       "editor.rulers" = [

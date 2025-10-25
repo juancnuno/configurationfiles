@@ -95,8 +95,14 @@
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
+  programs = {
+    firefox.enable = true;
+
+    java = {
+      enable = true;
+      package = pkgs.jdk25;
+    };
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

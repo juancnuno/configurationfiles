@@ -108,6 +108,7 @@
     git
     gnupg
     google-chrome
+    hunspellDicts.en_US
     meld
     pinentry-gnome3
     vim

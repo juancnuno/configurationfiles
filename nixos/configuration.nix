@@ -102,6 +102,8 @@
       enable = true;
       package = pkgs.jdk25;
     };
+
+    vim.enable = true;
   };
 
   # Allow unfree packages
@@ -116,7 +118,6 @@
     hunspellDicts.en_US
     meld
     pinentry-gnome3
-    vim
     vscode
   ];
 

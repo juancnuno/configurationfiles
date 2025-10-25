@@ -5,6 +5,7 @@
     ./bash.nix
     ./git.nix
     ./gpg-agent.nix
+    ./userDirs.nix
     ./vscode.nix
   ];
 

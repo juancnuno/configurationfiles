@@ -11,6 +11,7 @@
       ];
 
       "files.trimTrailingWhitespace" = true;
+      "jdk.telemetry.enabled" = true;
       "window.menuStyle" = "custom";
       "window.titleBarStyle" = "native";
       "workbench.editor.enablePreview" = false;

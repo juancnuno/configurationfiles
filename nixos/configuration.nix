@@ -118,7 +118,6 @@
     hunspellDicts.en_US
     meld
     pinentry-gnome3
-    vscode
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

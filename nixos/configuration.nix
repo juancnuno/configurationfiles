@@ -111,7 +111,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     gh
-    git
     gnupg
     google-chrome
     hunspellDicts.en_US

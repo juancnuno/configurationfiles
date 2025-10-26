@@ -85,16 +85,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.juancnuno = {
-    isNormalUser = true;
-    description = "Juan Carlos Nuno";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
-  };
-
   programs = {
     firefox.enable = true;
 
@@ -147,4 +137,14 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
 
+  users.users.juancnuno = {
+    description = "Juan C Nuno";
+
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+
+    isNormalUser = true;
+  };
 }

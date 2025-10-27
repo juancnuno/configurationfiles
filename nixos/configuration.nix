@@ -7,10 +7,15 @@
       ./hardware-configuration.nix
     ];
 
-  boot.initrd.luks.devices."luks-86629040-9218-488a-bec6-dffb2dd88f45".device = "/dev/disk/by-uuid/86629040-9218-488a-bec6-dffb2dd88f45";
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.systemd-boot.enable = true;
+  boot = {
+    initrd.luks.devices."luks-86629040-9218-488a-bec6-dffb2dd88f45".device = "/dev/disk/by-uuid/86629040-9218-488a-bec6-dffb2dd88f45";
+    kernelPackages = pkgs.linuxPackages_latest;
+
+    loader = {
+      efi.canTouchEfiVariables = true;
+      systemd-boot.enable = true;
+    };
+  };
 
   environment.systemPackages = with pkgs; [
     dconf-editor
@@ -22,22 +27,27 @@
     pinentry-gnome3
   ];
 
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
 
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
+    extraLocaleSettings = {
+      LC_ADDRESS = "en_US.UTF-8";
+      LC_IDENTIFICATION = "en_US.UTF-8";
+      LC_MEASUREMENT = "en_US.UTF-8";
+      LC_MONETARY = "en_US.UTF-8";
+      LC_NAME = "en_US.UTF-8";
+      LC_NUMERIC = "en_US.UTF-8";
+      LC_PAPER = "en_US.UTF-8";
+      LC_TELEPHONE = "en_US.UTF-8";
+      LC_TIME = "en_US.UTF-8";
+    };
   };
 
-  networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "nixos";
+    networkmanager.enable = true;
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   programs = {
@@ -52,24 +62,33 @@
   };
 
   security.rtkit.enable = true;
-  services.desktopManager.gnome.enable = true;
-  services.displayManager.gdm.enable = true;
 
-  services.pipewire = {
-    enable = true;
+  services = {
+    desktopManager.gnome.enable = true;
+    displayManager.gdm.enable = true;
 
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
+    pipewire = {
+      enable = true;
 
-  services.printing.enable = true;
-  services.pulseaudio.enable = false;
-  services.xserver.enable = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
 
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+      pulse.enable = true;
+    };
+
+    printing.enable = true;
+    pulseaudio.enable = false;
+
+    xserver = {
+      enable = true;
+
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
+    };
   };
 
   system.stateVersion = "25.05";

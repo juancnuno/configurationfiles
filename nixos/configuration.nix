@@ -76,15 +76,7 @@
 
     printing.enable = true;
     pulseaudio.enable = false;
-
-    xserver = {
-      enable = true;
-
-      xkb = {
-        layout = "us";
-        variant = "";
-      };
-    };
+    xserver.enable = true;
   };
 
   system.stateVersion = "25.05";

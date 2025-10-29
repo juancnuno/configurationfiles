@@ -20,12 +20,10 @@
   environment.systemPackages = with pkgs; [
     dconf-editor
     gh
-    gnupg
     google-chrome
     hunspellDicts.en_US
     maven
     meld
-    pinentry-gnome3
   ];
 
   i18n.extraLocaleSettings = {
@@ -49,6 +47,7 @@
 
   programs = {
     firefox.enable = true;
+    gnupg.agent.enable = true;
 
     java = {
       enable = true;

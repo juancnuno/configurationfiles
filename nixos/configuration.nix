@@ -23,6 +23,7 @@
     gnupg
     google-chrome
     hunspellDicts.en_US
+    maven
     meld
     pinentry-gnome3
   ];

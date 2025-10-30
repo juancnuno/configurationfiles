@@ -46,7 +46,6 @@
   nixpkgs.config.allowUnfree = true;
 
   programs = {
-    firefox.enable = true;
     gnupg.agent.enable = true;
 
     java = {

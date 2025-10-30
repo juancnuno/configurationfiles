@@ -52,8 +52,6 @@
       enable = true;
       package = pkgs.jdk25;
     };
-
-    vim.enable = true;
   };
 
   security.rtkit.enable = true;

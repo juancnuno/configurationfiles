@@ -62,7 +62,6 @@
     desktopManager.gnome.enable = true;
     displayManager.gdm.enable = true;
     pipewire.enable = true;
-    printing.enable = true;
     xserver.enable = true;
   };
 

@@ -39,7 +39,7 @@
   };
 
   networking = {
-    hostName = "nixos";
+    hostName = "usscerritos";
     networkmanager.enable = true;
   };
 

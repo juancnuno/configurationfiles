@@ -10,9 +10,6 @@
   ];
 
   home = {
-    file = {
-    };
-
     homeDirectory = "/home/juancnuno";
 
     packages = [

@@ -9,15 +9,16 @@
     ./vscode.nix
   ];
 
-  home.username = "juancnuno";
+  home.file = {
+  };
+
   home.homeDirectory = "/home/juancnuno";
-  home.stateVersion = "25.05";
 
   home.packages = [
   ];
 
-  home.file = {
-  };
+  home.stateVersion = "25.05";
+  home.username = "juancnuno";
 
   programs.home-manager.enable = true;
 }

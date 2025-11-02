@@ -20,6 +20,7 @@
   environment.systemPackages = with pkgs; [
     dconf-editor
     gh
+    gnome-boxes
     google-chrome
     hunspellDicts.en_US
     maven

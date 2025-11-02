@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -11,6 +11,7 @@
 
   home = {
     homeDirectory = "/home/juancnuno";
+    packages = [ (pkgs.callPackage ../../normalizefilterstring/package.nix { }) ];
     stateVersion = "25.05";
     username = "juancnuno";
   };

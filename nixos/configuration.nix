@@ -25,6 +25,7 @@
     hunspellDicts.en_US
     maven
     meld
+    nixfmt
   ];
 
   fonts.packages = with pkgs; [

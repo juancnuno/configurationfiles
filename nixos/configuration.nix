@@ -1,14 +1,15 @@
 { pkgs, ... }:
 
 {
-  imports =
-    [
-      <nixos-hardware/framework/13-inch/12th-gen-intel>
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    <nixos-hardware/framework/13-inch/12th-gen-intel>
+    ./hardware-configuration.nix
+  ];
 
   boot = {
-    initrd.luks.devices."luks-86629040-9218-488a-bec6-dffb2dd88f45".device = "/dev/disk/by-uuid/86629040-9218-488a-bec6-dffb2dd88f45";
+    initrd.luks.devices."luks-86629040-9218-488a-bec6-dffb2dd88f45".device =
+      "/dev/disk/by-uuid/86629040-9218-488a-bec6-dffb2dd88f45";
+
     kernelPackages = pkgs.linuxPackages_latest;
 
     loader = {

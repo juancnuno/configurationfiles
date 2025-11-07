@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   programs.git = {
     enable = true;
@@ -6,12 +8,12 @@
       credential = {
         "https://gist.github.com/".helper = [
           ""
-          "!/run/current-system/sw/bin/gh auth git-credential"
+          "!${pkgs.gh}/bin/gh auth git-credential"
         ];
 
         "https://github.com/".helper = [
           ""
-          "!/run/current-system/sw/bin/gh auth git-credential"
+          "!${pkgs.gh}/bin/gh auth git-credential"
         ];
       };
 

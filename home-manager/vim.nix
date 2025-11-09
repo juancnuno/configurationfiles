@@ -1,5 +1,6 @@
+{ config, ... }:
 let
-  enUtf8 = "/home/juancnuno/.config/vim/spell/en.utf-8.add";
+  enUtf8 = "${config.xdg.configHome}/vim/spell/en.utf-8.add";
 in
 {
   home.file."${enUtf8}".text = '''';

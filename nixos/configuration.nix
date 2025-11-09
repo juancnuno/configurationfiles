@@ -20,6 +20,7 @@
 
   environment.systemPackages = with pkgs; [
     dconf-editor
+    exiftool
     gnome-boxes
     google-chrome
     hunspellDicts.en_US

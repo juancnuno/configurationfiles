@@ -1,13 +1,16 @@
+let
+  enUtf8 = "/home/juancnuno/.config/vim/spell/en.utf-8.add";
+in
 {
-  home.file."/home/juancnuno/.config/vim/spell/en.utf-8.add".text = '''';
+  home.file."${enUtf8}".text = '''';
 
   programs.vim = {
     enable = true;
     defaultEditor = true;
 
     extraConfig = ''
-      set spf=/home/juancnuno/.config/vim/spell/en.utf-8.add
-      sil mksp! /home/juancnuno/.config/vim/spell/en.utf-8.add
+      set spf=${enUtf8}
+      sil mksp! ${enUtf8}
     '';
   };
 }

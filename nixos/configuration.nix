@@ -85,4 +85,12 @@
 
     isNormalUser = true;
   };
+
+  virtualisation.libvirtd.qemu.ovmf.packages = [
+    (pkgs.OVMF.override {
+      msVarsTemplate = true;
+      secureBoot = true;
+      tpmSupport = true;
+    }).fd
+  ];
 }

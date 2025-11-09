@@ -8,10 +8,6 @@ in
   programs.vim = {
     enable = true;
     defaultEditor = true;
-
-    extraConfig = ''
-      set spf=${enUtf8}
-      sil mksp! ${enUtf8}
-    '';
+    extraConfig = "sil mksp! ${enUtf8}";
   };
 }

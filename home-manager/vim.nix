@@ -7,8 +7,6 @@ in
 
   programs.vim = {
     enable = true;
-
-    defaultEditor = true;
     extraConfig = "sil mksp! ${enUtf8}";
   };
 }

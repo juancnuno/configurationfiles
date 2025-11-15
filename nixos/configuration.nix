@@ -21,6 +21,7 @@
   environment.systemPackages = with pkgs; [
     dconf-editor
     exiftool
+    firebase-tools
     gnome-boxes
     google-chrome
     hunspellDicts.en_US

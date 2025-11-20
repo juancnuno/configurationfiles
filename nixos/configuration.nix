@@ -1,5 +1,11 @@
 { pkgs, ... }:
 
+let
+  nixpkgs_with_mesa_25_2_6 =
+    import
+      (fetchTarball "https://github.com/NixOS/nixpkgs/archive/2b1f0ea3ee3952e68b164efa0a1c5e394ef2e781.tar.gz")
+      { };
+in
 {
   imports = [
     <nixos-hardware/framework/13-inch/12th-gen-intel>
@@ -54,7 +60,10 @@
     networkmanager.enable = true;
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+    overlays = [ (final: prev: { mesa = nixpkgs_with_mesa_25_2_6.mesa; }) ];
+  };
 
   programs = {
     gnupg.agent.enable = true;
